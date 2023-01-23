@@ -1,6 +1,9 @@
 body {
   height: 100vh;
   background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container {
   display: flex;
@@ -15,17 +18,21 @@ body {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  background-color: yellow;
 }
 
 #display {
   width: 85%;
   height: 72px;
-  border: 1px solid #3c4043;
+  border: 3px outset #3c4043;
   border-radius: 8px;
   margin: 33px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: lightslategray;
+  color: white;
+
 }
 
 .btns {
@@ -37,8 +44,11 @@ body {
 button {
   height: 100px;
   width: 100px;
-  border: 1px solid #3c4043;
+  border: 2px outset black;
   border-radius: 8px;
+  background-color: #3c4043;
+  color: white;
+  margin: 2px;
 }
 
 #answer {

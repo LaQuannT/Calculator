@@ -1,8 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('click', displayValue);
 
+  document.querySelector('#equals').addEventListener('click', function() {
+    document.querySelector('#answer').textContent = (operate(inputValues));
+  });
+
+  document.querySelector('#clear').addEventListener('click', function() {
+    inputValues.length = 0;
+    document.querySelector('#answer').textContent = '';
+    document.querySelector('#input').textContent = '';
+  });
 
 });
+
 
 // variable to hold input values 
 let inputValues = [];
@@ -30,19 +40,22 @@ function division(num, num2) {
 
 // create a function that takes two numbers and an operator, calls the right math function and returns total
 
-function total(num, operator, num2) {
+function operate(array) {
+  let num = parseInt(array[0]);
+  let num2 = parseInt(array[2]);
+  let operator = array[1];
   switch (operator) {
     case '+':
-      return add(num, num2);
+      return addition(num, num2);
 
     case '-':
-      return subtract(num, num2);
+      return subtraction(num, num2);
 
     case '*':
-      return multiply(num, num2);
+      return multiplication(num, num2);
 
     case '/':
-      return divide(num, num2);
+      return division(num, num2);
 
     default:
       throw new Error('Invalid operator');
