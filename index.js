@@ -1,18 +1,27 @@
+document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('click', displayValue);
+
+
+});
+
+// variable to hold input values 
+let inputValues = [];
+
 // Define function for simple math
 
-function add(num, num2) {
+function addition(num, num2) {
   return num + num2;
 }
 
-function subtract(num, num2) {
+function subtraction(num, num2) {
   return num - num2;
 }
 
-function multiply(num, num2) {
+function multiplication(num, num2) {
   return num * num2;
 }
 
-function divide(num, num2) {
+function division(num, num2) {
   if (num2 === 0) {
     throw new Error('Cannot divide by zero');
   }
@@ -39,3 +48,13 @@ function total(num, operator, num2) {
       throw new Error('Invalid operator');
   }
 };
+
+// display the value of a btn when it is clicked
+function displayValue() {
+  document.querySelectorAll('.btn').forEach(button => {
+    button.onclick = function (){
+      document.querySelector('#input').textContent = button.getAttribute('value');
+      inputValues.push(button.getAttribute('value'));
+    }
+  });
+}

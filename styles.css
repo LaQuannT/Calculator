@@ -23,6 +23,9 @@ body {
   border: 1px solid #3c4043;
   border-radius: 8px;
   margin: 33px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .btns {
@@ -36,4 +39,20 @@ button {
   width: 100px;
   border: 1px solid #3c4043;
   border-radius: 8px;
+}
+
+#answer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: xx-large;
+  padding: 0 13px 13px 0;
+}
+
+#input {
+  display: flex;
+  justify-content:flex-end;
+  align-items: flex-start;
+  font-size: large;
+  padding: 13px 13px 0 0; 
 }
